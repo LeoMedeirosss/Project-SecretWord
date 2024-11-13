@@ -17,7 +17,33 @@ function App() {
   const[gameStage, setGameStage] = useState(states[0].name);
   const[words] = useState(wordsList);
 
+  const [pickedWord, setPickedWord] = useState('');
+  const [pickedCategory, setPickedCategory] = useState('');
+  const [letters, setLetters] = useState([]);
+
+  const pickWordAndCategory = () => {
+    const categories = Object.keys(words);
+    const category = categories[Math.floor(Math.random()
+      * Object.keys(categories).length)];
+
+  const word = words[category][Math.floor(Math.random()
+  * words[category].length)]
+
+    return {word,category};
+  }
+
   const startGame = (startGame) => {
+    const {word, category} = pickWordAndCategory();
+
+    let wordLetters = word.split("");
+
+    //console.log(word,category);
+    //console.log(wordLetters);
+
+    setPickedWord(word);
+    setPickedCategory(category);
+    setLetters(letters);
+
     setGameStage(states[1].name)
   };
 
@@ -28,6 +54,7 @@ function App() {
   const retry = () => {
     setGameStage(states[0].name)
   }
+
 
   return (
     <div className="App">
