@@ -1,4 +1,4 @@
-import React from 'react'
+import './Over.css'
 
 const Over = () => {
   return (
