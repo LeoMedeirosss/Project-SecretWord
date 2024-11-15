@@ -8,6 +8,7 @@ const Game = ({verifyLetter}) => {
       </p>
       <h1>Adivinhe a palavra</h1>
       <h3 className='tip'>Dica: <span>Dica</span></h3>
+      <p>Tentativas restantes: <strong>X</strong></p>
 
       <div className='wordConteiner'>
         <span className='letter'>a</span>
@@ -18,7 +19,7 @@ const Game = ({verifyLetter}) => {
         <p>Adivinhe uma letra da palavra</p>
         <form>
           <input type="text" name='letter' maxLength="1" required/>
-          <button className='botao'>Play</button>
+          <button>Play</button>
         </form>
       </div>
 
