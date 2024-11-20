@@ -53,7 +53,26 @@ function App() {
   };
 
   const verifyLetter = (letter) => {
-    console.log(letter);
+    const nomralizedLetter = letter.toLowerCase()
+
+    if(guessedLetters.includes(nomralizedLetter) 
+    || wrongLetters.includes(nomralizedLetter)) {
+      return;
+    }
+
+    if(letters.includes(nomralizedLetter)){
+      setGuessedLetters((actualGuessedLetters) => [
+        ...actualGuessedLetters,
+        nomralizedLetter,
+      ]);
+    } else {
+      setWrongLetters((actualWrongLetters) =>[
+        ...actualWrongLetters,
+        nomralizedLetter,
+      ]);
+    }
+
+
   }
 
   const retry = () => {
