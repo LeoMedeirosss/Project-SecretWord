@@ -17,7 +17,6 @@ const StartScreen = ({startGame}) => {
         </div>
       </div>
     </>
-    
   )
 }
 
