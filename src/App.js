@@ -13,6 +13,8 @@ const states=[
   {id:3, name: "over"}
 ];
 
+const guessesQuantity = 5
+
 function App() {
   const[gameStage, setGameStage] = useState(states[0].name);
   const[words] = useState(wordsList);
@@ -23,7 +25,7 @@ function App() {
 
   const [guessedLetters, setGuessedLetters] = useState([])
   const [wrongLetters, setWrongLetters] = useState([])
-  const [guesses, setGuesses] = useState(5)
+  const [guesses, setGuesses] = useState(guessesQuantity)
   const [score, setScore] = useState(0)
 
   const pickWordAndCategory = () => {
@@ -70,12 +72,29 @@ function App() {
         ...actualWrongLetters,
         nomralizedLetter,
       ]);
+      setGuesses((actualGuesses) => actualGuesses - 1);
     }
-
-
   }
 
+  const clearLetterStates = () =>  {
+    setGuessedLetters([]);
+    setWrongLetters([]);
+  }
+
+  useEffect(() =>{
+    if(guesses <= 0) {
+
+      clearLetterStates()
+
+      setGameStage(states[2].name);
+    }
+
+  }, [guesses])
+
   const retry = () => {
+    setScore(0);
+    setGuesses(guessesQuantity);
+
     setGameStage(states[0].name)
   }
 
