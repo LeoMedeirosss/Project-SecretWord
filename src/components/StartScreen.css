@@ -4,5 +4,20 @@
 
 .start p{
     margin-bottom: 1em;
-    color: #ecfa11;
+    color: #b14141;
+}
+
+.title{
+    font-style: italic;
+    font-display: initial;
+}
+
+.by{
+    padding-bottom: 10px;
+}
+
+.by a{
+    font-style: normal;
+    text-decoration: none;
+    color: darkcyan;
 }
