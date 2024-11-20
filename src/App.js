@@ -113,7 +113,7 @@ function App() {
           guesses={guesses}
           score={score}
         />}
-        {gameStage === 'over' && <Over retry={retry} />}
+        {gameStage === 'over' && <Over retry={retry} score={score} />}
     </div>
   );
 }
