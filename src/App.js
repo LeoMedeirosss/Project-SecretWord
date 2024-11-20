@@ -13,7 +13,7 @@ const states=[
   {id:3, name: "over"}
 ];
 
-const guessesQuantity = 5
+const guessesQuantity = 3
 
 function App() {
   const[gameStage, setGameStage] = useState(states[0].name);
