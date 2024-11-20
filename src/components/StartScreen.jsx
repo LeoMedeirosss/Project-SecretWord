@@ -1,5 +1,6 @@
 import './StartScreen.css';
 
+
 const StartScreen = ({startGame}) => {
   return (
     <>
