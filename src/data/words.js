@@ -1,5 +1,5 @@
 export const wordsList = {
-    demacia: ["garen", "lux", "jarvan", "fiora", "shyvana", "vayne", "galio", "quinn", "poppy", "sylas"],
+    demacia: ["garen", "lux", "jarvan", "fiora", "shyvana", "vayne", "galio", "quinn", "poppy", "sylas", "morgana", "kayle"],
     noxus: ["darius", "swain", "katarina", "draven", "riven", "vladimir", "samira", "mordekaiser", "sion", "leblanc"],
     ionia: ["irelia", "kennen", "ahri", "yasuo", "karma", "shen", "zilean", "jhin", "akali", "masteryi", "leesin", "xayah", "rakan"],
     freljord: ["ashe", "sejuani", "lissandra", "tryndamere", "anivia", "olaf", "braum", "volibear", "trundle", "nunu ", "ornn", "trundle", "sejuani", "lissandra"],
